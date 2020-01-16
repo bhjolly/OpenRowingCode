@@ -8,9 +8,9 @@
  * 41% total
  */
 #include <avr/sleep.h>
-#define UseLCD //comment out this line if you don't have an LCD shield
+
 #include "mainEngine.h"   
-//#define debug  // uncomment this to get more verbose serial output
+#define debug  // uncomment this to get more verbose serial output
 
 //-------------------------------------------------------------------
 //               pins
@@ -35,9 +35,6 @@ void setup()
     startMenu();
   #endif
   Serial.println(F("Stroke\tSPM\tSplit\tWatts\tDistance\tTime\tDragFactor"));
-  //done with LCD sheild - safe to use internal reference now (is there a workaround for this...?)
-  analogReference(INTERNAL);
-  // Print a message to the LCD.
 }
 
 //quickly figure out if a rotation has happened.
